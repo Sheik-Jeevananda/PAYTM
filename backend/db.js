@@ -1,0 +1,37 @@
+//mongodb+srv://sheikjeevananda:ravitejapulibanti@jeeva.fnorjfj.mongodb.net/
+
+
+const mongoose = require("mongoose");
+
+
+
+mongoose.connect("mongodb+srv://sheikjeevananda:ravitejapulibanti@jeeva.fnorjfj.mongodb.net/Paytm");
+
+
+const userSchema = new mongoose.Schema({
+  username : String,
+  password : String,
+  firstName : String,
+  lastName : String
+})
+
+const AccountSchema = new mongoose.Schema({
+  userId:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'User',
+    required:true
+  },
+  
+  balance :{
+      type:Number,
+      required:true
+    }
+})
+
+const User = mongoose.model('User' , userSchema);
+const Account = mongoose.model('Account' , AccountSchema)
+
+module.exports = {
+    User,
+    Account,
+}
