@@ -9,6 +9,7 @@ import Send from './Pages/Send';
 
 function App(){
   return <div>
+    <h1>Hi</h1>
     <BrowserRouter>
     <Routes>
       <Route path='/' element={ <Signup />}/>
