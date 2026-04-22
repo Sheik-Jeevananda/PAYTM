@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 
 
-mongoose.connect("mongodb+srv://sheikjeevananda:ravitejapulibanti@jeeva.fnorjfj.mongodb.net/Paytm");
+mongoose.connect("");
 
 
 const userSchema = new mongoose.Schema({
